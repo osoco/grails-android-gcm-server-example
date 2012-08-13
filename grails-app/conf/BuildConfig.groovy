@@ -14,6 +14,15 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
 
+        /*
+         * Configure custom Ivy resolver for Osoco's plugin repository.
+         */
+        def osocoResolver = new org.apache.ivy.plugins.resolver.URLResolver()
+        osocoResolver.addArtifactPattern("http://svn.osoco.es/plugins/grails-[artifact]-[revision].[ext]")
+        osocoResolver.name = "osoco-plugins"
+        osocoResolver.settings = ivySettings    
+        resolver osocoResolver
+
         // uncomment the below to enable remote dependency resolution
         // from public Maven repositories
         //mavenLocal()
