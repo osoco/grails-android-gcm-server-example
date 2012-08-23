@@ -21,7 +21,7 @@
             <div id="mainContent">
                 <h1><g:message code="sender.title" /></h1>
                 <p><g:message code="sender.appDescription" /></p>
-                <p><g:message code="sender.usage" args="${[g.createLink(controller:'device', action:'subscribe', absolute:'true') + 'deviceToken=yourDeviceToken&projectId=yourProjectId']}"/></p>
+                <p><g:message code="sender.usage" args="${[g.createLink(controller:'device', action:'subscribe', absolute:'true') + '?deviceToken=yourDeviceToken&projectId=yourProjectId']}"/></p>
                 <g:render template="/layouts/mainContent" />
             </div>
             <div id="footer">
