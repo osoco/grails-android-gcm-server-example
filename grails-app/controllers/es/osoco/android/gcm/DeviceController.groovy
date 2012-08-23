@@ -4,8 +4,8 @@ class DeviceController {
 
     def subscribe = {
 		println "${new Date()}: $params"
-		if (params.deviceToken && !Device.findByToken(params.deviceToken)) {
-			new Device(token:params.deviceToken).save(failOnError:true)
+		if (params.deviceToken && ParamState.projectId && !Device.findByToken(params.deviceToken)) {
+			new Device(token:params.deviceToken, projectId:params.projectId).save(failOnError:true)
 		}
 		render ""
 	}

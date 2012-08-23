@@ -8,10 +8,20 @@ class AndroidGcmSenderController {
     def androidGcmService
 	def grailsApplication
 	
-	def index = { 
-		params.tokens = Device.findAll()*.token
+	def beforeInterceptor = {
+		if (params.projectId) {
+			params.tokens = (Device.findAllByProjectId(params.projectId) + 
+				Device.findAllByProjectIdIsNull())*.token
+		}
+	}
+	
+	def configureMessage = {
 		params.apiKey = grailsApplication.config.android.gcm.api.key ?: ''
-		render view: 'index', model: params
+		render view:'index', model: params
+	}
+	
+	def index = {
+		render view:'index', model:params
     }
 	
 	def sendMessage = {

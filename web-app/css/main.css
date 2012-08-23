@@ -328,11 +328,31 @@ p {
    
 }
 
+p.usage {
+    font-weight: bold;
+}
+
+#loading {
+    background: transparent;
+    left: 50%;
+    position: absolute;
+}
+
 button.add {
     border: none;
     background: transparent;
     margin: 0;
     padding: 0;
+}
+
+input[name="refresh"] {
+    border: none;
+    background: url(../images/skin/refresh.png) no-repeat center;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    color: transparent;
 }
 
 div#footer {
@@ -351,4 +371,8 @@ div#footer div#osoco-fish {
     background:url(../images/pie/pez.png) no-repeat center;
     min-height: 159px;
     margin-top: -100px;
+}
+
+div#message {
+    margin: 0.5em;
 }
