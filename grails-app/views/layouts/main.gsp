@@ -30,6 +30,7 @@
             <div id="footer">
                 <div id="wave">&nbsp;</div>
                 <div id="osoco-fish">&nbsp;</div>
+                <div id="credits"><g:render template="/layouts/credits" /></div>
             </div>
         </body>
     </html>

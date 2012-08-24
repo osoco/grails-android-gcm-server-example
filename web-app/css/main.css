@@ -376,3 +376,9 @@ div#footer div#osoco-fish {
 div#message {
     margin: 0.5em;
 }
+
+div#credits {
+    color: #def;
+    margin: 0.5em;
+    width: 35%;
+}
