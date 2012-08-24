@@ -11,6 +11,7 @@
             <g:layoutHead />
             <g:javascript library="application" />
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
             <script src="https://raw.github.com/deigote/ajaxify/master/ajaxify.js"></script>
         </head>
         <body>
@@ -22,7 +23,9 @@
                 <h1><g:message code="sender.title" /></h1>
                 <p><g:message code="sender.appDescription" /></p>
                 <p><g:message code="sender.usage" args="${[g.createLink(controller:'device', action:'subscribe', absolute:'true') + '?deviceToken=yourDeviceToken&projectId=yourProjectId']}"/></p>
-                <g:render template="/layouts/mainContent" />
+                <div id="content">
+                    <g:render template="/layouts/mainContent" />
+                </div>
             </div>
             <div id="footer">
                 <div id="wave">&nbsp;</div>

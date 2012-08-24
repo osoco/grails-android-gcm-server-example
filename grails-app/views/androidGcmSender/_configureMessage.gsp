@@ -89,5 +89,5 @@
         var toClone = prev.children('.toDupe :first');
         toClone.clone().appendTo(prev);
     });
-    ajaxifyLink("form[name='message']", "#message", "action", "submit", "POST");
+    ajaxifyLink("form[name='message']", "#content", "action", "submit", "POST");
 </script>
