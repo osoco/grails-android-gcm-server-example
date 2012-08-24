@@ -1,0 +1,1 @@
+<p><g:message code="credits"/></p>
